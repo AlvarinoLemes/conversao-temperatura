@@ -10,17 +10,21 @@ jobs:
 
   CI:
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v2
       
       - name: Setup do NodeJS
-        uses: actions/setup-node@v3.5.1
+        uses: actions/setup-node@v3.8.0
         with: 
-          node-version: 16.15.1
+          node-version: 16.15.1      
           
       - name: Instalação do Mocha e pacotes para teste
         run:
           cd src;
           npm install -g mocha;
           npm install
+          
+      - name: Execução do teste
+        run: mocha src/test/convert.js
     
