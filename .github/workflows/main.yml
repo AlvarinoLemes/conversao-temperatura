@@ -27,4 +27,13 @@ jobs:
           
       - name: Execução do teste
         run: mocha src/test/convert.js
-    
+        
+      - name: Construção da imagem Docker
+        uses: docker/build-push-action@v3.2.0
+        with:
+          context: src
+          file: src/Dockerfile
+          push: true
+          tags: 
+            alvarino/conversao-temperatura-2-main:latest
+
