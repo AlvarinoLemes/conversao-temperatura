@@ -42,5 +42,4 @@ jobs:
           push: true
           tags: 
             alvarino/conversao-temperatura-2-main:${{github.run_number}}
-            alvarino/conversao-temperatura-2-main:latest
 
