@@ -41,5 +41,5 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: 
-            alvarino/conversao-temperatura-2-main:${{github.run_number}}
+            alvarino/conversao-temperatura-2-main:V${{github.run_number}}
 
